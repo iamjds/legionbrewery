@@ -19,3 +19,4 @@ if ( ! function_exists( 'lb_setup' ) ) {
         }
 }
 add_action( 'after_setup_theme', 'lb_setup' );
+

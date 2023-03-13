@@ -6,3 +6,10 @@ Version: 2.0.0
 Requires PHP: 8.0
 Text Domain: legionbrewery
 */
+
+nav.nav-desktop1 ul.wp-block-navigation__container > li:not(:last-of-type) {
+    margin-right: 20px;
+}
+nav.nav-desktop2 ul.wp-block-navigation__container > li:not(:first-of-type) {
+    margin-left: 20px;
+}

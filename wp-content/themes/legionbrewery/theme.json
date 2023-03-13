@@ -1,17 +1,23 @@
 {
+    "$schema": "https://schemas.wp.org/trunk/theme.json",
     "version": 2,
     "settings": {
         "color": {
             "palette": [
+                {
+                    "slug": "base",
+					"color": "#ffffff",
+					"name": "Base"					
+				},
                 {
                     "slug": "primary",
                     "color": "#2e4158",
                     "name": "Primary"
                 },
                 {
-                    "slug": "secondary",
-                    "color": "#e7dabd",
-                    "name": "Secondary"
+                    "slug": "off-white",
+                    "color": "#f4f1e8",
+                    "name": "off-white"
                 }                        
             ],
             "link": true
@@ -24,19 +30,60 @@
                     "name": "System Fonts"
                 },
                 {
-                    "fontFamily": "Eveleth-Bold",
+                    "fontFamily": "EvelethBold",
                     "slug": "eveleth-bold",
-                    "name": "Eveleth Bold"
+                    "name": "Eveleth Bold",
+                    "fontFace": [
+                        {
+                            "font-family": "EvelethBold",
+                            "font-weight": "700",
+                            "font-style": "normal",
+                            "font-stretch": "normal",
+                            "src": [ "file:./assets/fonts/EvelethCleanRegular.otf" ]
+                        }
+                    ]
                 },
                 {
-                    "fontFamily": "Eveleth-Thin",
+                    "fontFamily": "EvelethThin",
                     "slug": "eveleth-thin",
-                    "name": "Eveleth Thin"
+                    "name": "Eveleth Thin",
+                    "fontFace": [
+                        {
+                            "font-family": "EvelethThin",
+                            "font-weight": "100",
+                            "font-style": "normal",
+                            "font-stretch": "normal",
+                            "src": [ "file:./assets/fonts/EvelethCleanThin.otf" ]
+                        }
+                    ]
                 },
                 {
-                    "fontFamily": "Eveleth-Rough",
+                    "fontFamily": "EvelethRough",
                     "slug": "eveleth-rough",
-                    "name": "Eveleth Rough"
+                    "name": "Eveleth Rough",
+                    "fontFace": [
+                        {
+                            "font-family": "EvelethRough",
+                            "font-weight": "700",
+                            "font-style": "normal",
+                            "font-stretch": "normal",
+                            "src": [ "file:./assets/fonts/EvelethRough.otf" ]
+                        }
+                    ]
+                },
+                {
+                    "fontFamily": "LocalBrewery",
+                    "slug": "local-brewery",
+                    "name": "Local Brewery",
+                    "fontFace": [
+                        {
+                            "font-family": "LocalBrewery",
+                            "font-weight": "100",
+                            "font-style": "normal",
+                            "font-stretch": "normal",
+                            "src": [ "file:./assets/fonts/LocalBreweryBold.otf" ]
+                        }
+                    ]
                 }
             ],
             "fontSizes": [
@@ -66,6 +113,7 @@
                     "name": "Extra large"
                 }
             ],
+            "fontWeight": true,
             "lineHeight": true
         },
         "spacing": {
@@ -74,7 +122,7 @@
             "units": [ "px", "em", "rem", "vh", "vw", "%" ]
         },
         "layout": {
-            "contentSize": "840px",
+            "contentSize": "1200px",
             "wideSize": "1400px"
         },
         "blocks": {
@@ -87,13 +135,8 @@
     },
     "styles": {
         "color": {
-			"background": "var(--wp--preset--color--primary)",
-			"text": "var(--wp--preset--color--secondary)",
+			"background": "var(--wp--preset--color--off-white)",
+			"text": "var(--wp--preset--color--primary)"
 		}
-    },
-    "blocks": {
-        "core/heading":{
-            
-        }
     }
 }
