@@ -7,9 +7,111 @@ Requires PHP: 8.0
 Text Domain: legionbrewery
 */
 
+:root {
+    --lb--color--legion-red: #bc2135;
+}
+
 nav.nav-desktop1 ul.wp-block-navigation__container > li:not(:last-of-type) {
     margin-right: 20px;
 }
 nav.nav-desktop2 ul.wp-block-navigation__container > li:not(:first-of-type) {
     margin-left: 20px;
+}
+header .header-logo {
+    width: 130px;
+}
+footer {
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--base);
+}
+
+
+/************
+* Home page
+*************/
+.home-visit-us figure.location-image {
+    position: relative;
+}
+.home-visit-us figure.location-image:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0,0, 0.2);
+}
+.home-visit-us figure.location-image ~ .image-360-overlay {
+    position: absolute;
+    margin-top: 0;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+.home-visit-us figure.location-image ~ .image-360-overlay img {
+    width: 100px;
+}
+
+.home-food-beer {
+    position: relative;
+}
+.home-food-beer > .wp-block-group {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+}
+.home-food-beer img {
+    width: 100%;
+}
+.home-food-beer .wp-block-column .cta-btn {
+    transform: translateY(-50px);
+}
+
+
+/************
+* GLOBALS
+************/
+.wp-block-column {
+    position: relative;
+}
+
+
+
+/************
+* Utilities
+************/
+.arrow-separator {
+    max-width: 1200px;
+    position: relative;
+    height: 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    overflow: visible;
+    border-top: none;
+    border-bottom-width: 2px;
+    border-bottom-color: var(--lb--color--legion-red);
+}
+.arrow-separator:before, .arrow-separator:after {    
+    font-size: 2em;
+    color: var(--lb--color--legion-red);    
+    position: absolute;    
+    bottom: -20px;
+}
+.arrow-separator:before {
+    content: "\27F5";
+    left: 0px;    
+}
+.arrow-separator:after {
+    content: "\27F6";
+    right: 0px;    
+}
+.cta-btn > a.wp-block-button__link {
+    padding: var(--wp--preset--spacing--40);
+    width: 270px;
+    max-width: 100%;
+    white-space: nowrap;
+    transition: background-color 0.5s ease-out;
+}
+.cta-btn > a.wp-block-button__link:hover {
+    background-color: #0082A6 !important;
 }

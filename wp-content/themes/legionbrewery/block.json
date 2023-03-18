@@ -1,0 +1,9 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "title": "Example: Basic",
+    "name": "legion-brewery/footer-form",
+    "category": "layout",
+    "icon": "universal-access-alt",
+    "editorScript": "file:./assets/js/blocks/form.js"
+}
